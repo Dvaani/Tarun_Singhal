@@ -3,1290 +3,1348 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tarun Singhal — Growth Leader & CEO</title>
+<title>Tarun Singhal — CxO Growth Leader & GenAI Strategist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
+  /* ── TOKENS ──────────────────────────────── */
   :root {
-    --navy: #060C1A;
-    --navy-mid: #0D1B3E;
-    --teal: #00D4B8;
-    --teal-dim: rgba(0,212,184,0.12);
-    --teal-glow: rgba(0,212,184,0.35);
-    --cream: #F0EDE6;
-    --slate: #8892AA;
-    --slate-light: #B4BCCE;
-    --white: #ffffff;
+    --navy:       #0D1B2A;
+    --navy-mid:   #1A2E45;
+    --navy-light: #2E4057;
+    --gold:       #C9A84C;
+    --gold-light: #DFC27A;
+    --gold-pale:  #F0E3BC;
+    --ivory:      #F5F0E8;
+    --ivory-warm: #EDE6D6;
+    --text-dark:  #1A1A2E;
+    --text-mid:   #4A5568;
+    --white:      #FFFFFF;
   }
 
+  /* ── RESET ───────────────────────────────── */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--navy);
-    color: var(--cream);
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    background: var(--ivory);
+    color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: none;
   }
 
-  /* ─── Custom Cursor ─────────────────────────── */
-  #cursor-dot {
-    width: 8px; height: 8px;
-    background: var(--teal);
-    border-radius: 50%;
-    position: fixed; top: 0; left: 0;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: transform 0.08s ease;
-  }
-
-  #cursor-ring {
-    width: 40px; height: 40px;
-    border: 1.5px solid rgba(0,212,184,0.5);
-    border-radius: 50%;
-    position: fixed; top: 0; left: 0;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: all 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  #cursor-ring.hovering {
-    width: 64px; height: 64px;
-    border-color: var(--teal);
-    background: rgba(0,212,184,0.07);
-  }
-
-  /* ─── Nav ───────────────────────────────────── */
+  /* ── NAV ─────────────────────────────────── */
   nav {
-    position: fixed; top: 0; left: 0; right: 0;
+    position: fixed;
+    top: 0; left: 0; right: 0;
     z-index: 100;
-    padding: 24px 60px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(16px);
-    background: rgba(6,12,26,0.7);
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-    transition: padding 0.3s ease;
+    justify-content: space-between;
+    padding: 0 48px;
+    height: 68px;
+    background: rgba(13, 27, 42, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.18);
   }
 
   .nav-logo {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 1.1rem;
-    letter-spacing: 0.04em;
-    color: var(--white);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
     text-decoration: none;
   }
 
-  .nav-logo span { color: var(--teal); }
-
   .nav-links {
-    display: flex; gap: 40px;
+    display: flex;
+    gap: 36px;
     list-style: none;
   }
 
   .nav-links a {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--slate);
+    color: rgba(245, 240, 232, 0.7);
     text-decoration: none;
-    transition: color 0.2s;
-    font-weight: 500;
+    transition: color 0.25s;
   }
 
-  .nav-links a:hover { color: var(--teal); }
+  .nav-links a:hover { color: var(--gold); }
 
   .nav-cta {
     font-size: 0.78rem;
+    font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--teal);
-    border: 1px solid var(--teal);
-    padding: 10px 22px;
-    border-radius: 2px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s, color 0.2s;
-  }
-
-  .nav-cta:hover {
-    background: var(--teal);
     color: var(--navy);
+    background: var(--gold);
+    padding: 9px 22px;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.2s;
   }
+  .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
 
-  /* ─── Hero ──────────────────────────────────── */
-  #hero {
+  /* ── HERO ────────────────────────────────── */
+  .hero {
     min-height: 100vh;
-    display: flex;
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 140px 60px 80px;
     position: relative;
     overflow: hidden;
+    padding-top: 68px;
   }
 
-  .hero-bg-grid {
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(0,212,184,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,212,184,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
-  }
-
-  .hero-orb {
+  /* Geometric texture — subtle diagonal lines */
+  .hero::before {
+    content: '';
     position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 60px,
+        rgba(201, 168, 76, 0.03) 60px,
+        rgba(201, 168, 76, 0.03) 61px
+      );
     pointer-events: none;
   }
 
-  .orb-1 {
-    width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(0,212,184,0.15) 0%, transparent 70%);
-    top: -100px; right: -100px;
-    animation: orb-drift 8s ease-in-out infinite alternate;
+  /* Gold arc — the signature element */
+  .hero-arc {
+    position: absolute;
+    right: -120px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    border: 1px solid rgba(201, 168, 76, 0.12);
+    pointer-events: none;
   }
-
-  .orb-2 {
-    width: 400px; height: 400px;
-    background: radial-gradient(circle, rgba(13,27,62,0.8) 0%, transparent 70%);
-    bottom: 0; left: -100px;
+  .hero-arc::before {
+    content: '';
+    position: absolute;
+    inset: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(201, 168, 76, 0.08);
   }
-
-  @keyframes orb-drift {
-    from { transform: translate(0, 0) scale(1); }
-    to   { transform: translate(-40px, 40px) scale(1.08); }
+  .hero-arc::after {
+    content: '';
+    position: absolute;
+    inset: 110px;
+    border-radius: 50%;
+    border: 1px solid rgba(201, 168, 76, 0.05);
   }
 
   .hero-content {
+    padding: 80px 64px 80px 80px;
     position: relative;
     z-index: 2;
-    max-width: 820px;
   }
 
   .hero-eyebrow {
-    display: flex; align-items: center; gap: 14px;
-    margin-bottom: 32px;
-    opacity: 0;
-    animation: fade-up 0.7s ease 0.2s forwards;
-  }
-
-  .eyebrow-line {
-    width: 40px; height: 1px;
-    background: var(--teal);
-  }
-
-  .eyebrow-text {
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--teal);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
     font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(3.2rem, 5vw, 5.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--ivory);
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--gold-light);
   }
 
   .hero-title {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: clamp(3rem, 7vw, 5.5rem);
-    line-height: 1.0;
-    letter-spacing: -0.02em;
-    color: var(--white);
-    margin-bottom: 28px;
-    opacity: 0;
-    animation: fade-up 0.7s ease 0.35s forwards;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1rem, 1.6vw, 1.35rem);
+    font-weight: 400;
+    font-style: italic;
+    color: rgba(245, 240, 232, 0.6);
+    margin-bottom: 36px;
+    line-height: 1.5;
   }
 
-  .hero-title .highlight {
-    color: transparent;
-    -webkit-text-stroke: 1.5px var(--teal);
-    position: relative;
-  }
-
-  .hero-sub {
-    font-size: 1.15rem;
-    color: var(--slate-light);
-    line-height: 1.7;
-    max-width: 560px;
-    margin-bottom: 48px;
+  .hero-statement {
+    font-size: 1.05rem;
     font-weight: 300;
-    opacity: 0;
-    animation: fade-up 0.7s ease 0.5s forwards;
+    color: rgba(245, 240, 232, 0.82);
+    line-height: 1.75;
+    max-width: 480px;
+    margin-bottom: 48px;
+    border-left: 2px solid var(--gold);
+    padding-left: 22px;
   }
 
   .hero-actions {
-    display: flex; gap: 16px; align-items: center;
+    display: flex;
+    gap: 16px;
     flex-wrap: wrap;
-    opacity: 0;
-    animation: fade-up 0.7s ease 0.65s forwards;
   }
 
   .btn-primary {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: var(--teal);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--gold);
     color: var(--navy);
     font-size: 0.82rem;
+    font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-weight: 600;
-    padding: 16px 32px;
-    border-radius: 2px;
+    padding: 14px 28px;
     text-decoration: none;
-    transition: box-shadow 0.3s, transform 0.2s;
+    transition: background 0.25s, transform 0.2s;
   }
-
-  .btn-primary:hover {
-    box-shadow: 0 0 30px var(--teal-glow);
-    transform: translateY(-2px);
-  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
 
   .btn-ghost {
-    display: inline-flex; align-items: center; gap: 10px;
-    color: var(--slate-light);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--ivory);
     font-size: 0.82rem;
+    font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-weight: 500;
-    padding: 16px 32px;
+    padding: 14px 28px;
+    border: 1px solid rgba(245, 240, 232, 0.3);
     text-decoration: none;
-    transition: color 0.2s;
-    border-bottom: 1px solid rgba(132,140,170,0.2);
+    transition: border-color 0.25s, color 0.25s;
+  }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* Hero right — photo + credential chips */
+  .hero-visual {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 80px 80px 40px;
+    gap: 32px;
   }
 
-  .btn-ghost:hover { color: var(--white); }
-
-  .arrow-icon {
-    width: 16px; height: 16px;
-    transition: transform 0.2s;
+  .hero-photo-wrap {
+    position: relative;
+    width: 340px;
+    height: 420px;
+    flex-shrink: 0;
   }
 
-  .btn-primary:hover .arrow-icon { transform: translate(3px, -3px); }
-
-  /* ─── Growth Trajectory SVG ─────────────────── */
-  .trajectory-wrap {
+  /* Gold frame offset */
+  .hero-photo-wrap::before {
+    content: '';
     position: absolute;
-    right: 0; top: 50%;
-    transform: translateY(-50%);
-    width: 520px; height: 360px;
+    top: -12px;
+    left: -12px;
+    right: 12px;
+    bottom: 12px;
+    border: 1px solid rgba(201, 168, 76, 0.35);
+    z-index: 0;
+  }
+
+  .hero-photo {
+    position: relative;
     z-index: 1;
-    opacity: 0;
-    animation: fade-in 1.2s ease 1s forwards;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    filter: grayscale(15%) contrast(1.05);
   }
 
-  .trajectory-wrap svg {
-    width: 100%; height: 100%;
-    overflow: visible;
+  /* Photo placeholder */
+  .hero-photo-placeholder {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: var(--navy-mid);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
   }
 
-  .traj-path {
-    fill: none;
-    stroke: var(--teal);
-    stroke-width: 2;
-    stroke-dasharray: 900;
-    stroke-dashoffset: 900;
-    animation: draw-line 2.2s cubic-bezier(0.4, 0, 0.2, 1) 1.2s forwards;
+  .hero-photo-placeholder svg {
+    width: 80px;
+    height: 80px;
+    opacity: 0.25;
+    color: var(--gold);
   }
 
-  .traj-path-glow {
-    fill: none;
-    stroke: var(--teal);
-    stroke-width: 6;
-    opacity: 0.15;
-    stroke-dasharray: 900;
-    stroke-dashoffset: 900;
-    animation: draw-line 2.2s cubic-bezier(0.4, 0, 0.2, 1) 1.2s forwards;
-    filter: blur(4px);
+  .hero-photo-placeholder span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(201, 168, 76, 0.5);
   }
 
-  @keyframes draw-line {
-    to { stroke-dashoffset: 0; }
-  }
-
-  .traj-dot {
-    opacity: 0;
-    animation: pop-in 0.4s ease forwards;
-  }
-
-  .traj-dot:nth-child(3) { animation-delay: 1.8s; }
-  .traj-dot:nth-child(4) { animation-delay: 2.1s; }
-  .traj-dot:nth-child(5) { animation-delay: 2.4s; }
-  .traj-dot:nth-child(6) { animation-delay: 2.7s; }
-  .traj-dot:nth-child(7) { animation-delay: 3s; }
-
-  @keyframes pop-in {
-    from { opacity: 0; transform: scale(0); transform-box: fill-box; transform-origin: center; }
-    to   { opacity: 1; transform: scale(1); transform-box: fill-box; transform-origin: center; }
-  }
-
-  .traj-label {
-    font-family: 'Inter', sans-serif;
-    font-size: 10px;
-    fill: var(--slate);
-    letter-spacing: 0.08em;
-  }
-
-  /* ─── Stats Strip ───────────────────────────── */
-  #stats {
-    padding: 0 60px;
-    margin-bottom: 100px;
-  }
-
-  .stats-inner {
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 4px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    overflow: hidden;
-    background: rgba(13,27,62,0.3);
+  /* Credential chips floating beside photo */
+  .credential-chip {
+    position: absolute;
+    background: rgba(201, 168, 76, 0.1);
+    border: 1px solid rgba(201, 168, 76, 0.3);
     backdrop-filter: blur(8px);
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .credential-chip span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+  }
+
+  .chip-tedx { top: 30px; right: -30px; }
+  .chip-chevening { bottom: 100px; right: -40px; }
+  .chip-amity { bottom: 30px; left: -30px; }
+
+  /* ── CREDENTIAL RAIL ─────────────────────── */
+  .rail {
+    background: var(--navy-mid);
+    border-top: 1px solid rgba(201, 168, 76, 0.15);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .rail-inner {
+    display: flex;
+    align-items: center;
+    animation: rail-scroll 30s linear infinite;
+    width: max-content;
+  }
+
+  .rail:hover .rail-inner { animation-play-state: paused; }
+
+  @keyframes rail-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .rail-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 44px;
+    border-right: 1px solid rgba(201, 168, 76, 0.1);
+    flex-shrink: 0;
+  }
+
+  .rail-dot {
+    width: 4px;
+    height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .rail-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(201, 168, 76, 0.75);
+  }
+
+  /* ── SECTION BASE ────────────────────────── */
+  section { padding: 96px 80px; }
+
+  .section-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .section-eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(201, 168, 76, 0.2);
+    max-width: 60px;
+  }
+
+  .section-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--navy);
+    margin-bottom: 20px;
+  }
+
+  .section-sub {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--text-mid);
+    line-height: 1.75;
+    max-width: 560px;
+    margin-bottom: 56px;
+  }
+
+  /* ── ABOUT ───────────────────────────────── */
+  #about {
+    background: var(--ivory);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-left {}
+
+  .about-para {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  .about-para strong {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+
+  .about-right {}
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: rgba(201, 168, 76, 0.12);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    margin-bottom: 36px;
   }
 
   .stat-item {
-    padding: 40px 36px;
-    border-right: 1px solid rgba(255,255,255,0.06);
-    position: relative;
-    transition: background 0.3s;
+    background: var(--ivory);
+    padding: 28px 24px;
+    text-align: center;
   }
 
-  .stat-item:last-child { border-right: none; }
-  .stat-item:hover { background: rgba(0,212,184,0.05); }
-
   .stat-number {
-    font-family: 'Syne', sans-serif;
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--white);
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--navy);
     line-height: 1;
     margin-bottom: 8px;
   }
 
-  .stat-number span { color: var(--teal); }
+  .stat-number sup {
+    font-size: 1.2rem;
+    vertical-align: super;
+    color: var(--gold);
+  }
 
   .stat-label {
+    font-family: 'Cormorant Garamond', serif;
     font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--slate);
     font-weight: 500;
-    line-height: 1.4;
-  }
-
-  /* ─── About / Manifesto ─────────────────────── */
-  #about {
-    padding: 100px 60px;
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 100px;
-    align-items: start;
-    border-top: 1px solid rgba(255,255,255,0.04);
-  }
-
-  .section-eyebrow {
-    display: flex; align-items: center; gap: 14px;
-    margin-bottom: 20px;
-  }
-
-  .section-tag {
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--teal);
-    font-weight: 500;
+    color: var(--text-mid);
   }
 
-  .section-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    color: var(--white);
-    margin-bottom: 24px;
+  .credential-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid rgba(13, 27, 42, 0.1);
   }
 
-  .about-sticky {
-    position: sticky;
-    top: 100px;
+  .credential-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(13, 27, 42, 0.07);
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-weight: 400;
   }
 
-  .about-desc {
-    color: var(--slate-light);
-    font-size: 0.95rem;
-    line-height: 1.8;
-    margin-bottom: 16px;
-    font-weight: 300;
+  .credential-item:last-child { border-bottom: none; }
+
+  .credential-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
   }
 
-  .about-highlight {
-    color: var(--cream);
-    font-size: 1.25rem;
-    font-style: italic;
-    line-height: 1.6;
-    border-left: 2px solid var(--teal);
-    padding-left: 20px;
-    margin: 32px 0;
-    font-weight: 300;
+  .credential-icon svg {
+    width: 16px;
+    height: 16px;
+    color: var(--gold);
   }
 
-  .about-tags {
-    display: flex; flex-wrap: wrap; gap: 8px;
-    margin-top: 28px;
-  }
-
-  .about-tag {
-    font-size: 0.72rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--slate-light);
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 6px 14px;
-    border-radius: 2px;
-    font-weight: 500;
-    transition: border-color 0.2s, color 0.2s;
-  }
-
-  .about-tag:hover {
-    border-color: var(--teal);
-    color: var(--teal);
-  }
-
-  /* ─── Career Timeline ───────────────────────── */
-  .career-items { display: flex; flex-direction: column; gap: 0; }
-
-  .career-item {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 32px;
-    padding: 36px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    position: relative;
-    transition: background 0.2s;
-  }
-
-  .career-item:first-child { border-top: 1px solid rgba(255,255,255,0.05); }
-
-  .career-item::before {
-    content: '';
-    position: absolute;
-    left: -60px; top: 50%;
-    width: 8px; height: 8px;
-    background: transparent;
-    border: 1.5px solid var(--slate);
-    border-radius: 50%;
-    transform: translateY(-50%);
-    transition: border-color 0.2s, background 0.2s;
-  }
-
-  .career-item:hover::before {
-    border-color: var(--teal);
-    background: var(--teal);
-    box-shadow: 0 0 12px var(--teal-glow);
-  }
-
-  .career-year {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: var(--slate);
-    letter-spacing: 0.05em;
-    padding-top: 4px;
-    transition: color 0.2s;
-  }
-
-  .career-item:hover .career-year { color: var(--teal); }
-
-  .career-role {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--white);
-    margin-bottom: 4px;
-  }
-
-  .career-company {
-    font-size: 0.82rem;
-    letter-spacing: 0.06em;
-    color: var(--teal);
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
-
-  .career-desc {
-    font-size: 0.88rem;
-    color: var(--slate-light);
-    line-height: 1.7;
-    font-weight: 300;
-  }
-
-  /* ─── Expertise ─────────────────────────────── */
+  /* ── EXPERTISE ───────────────────────────── */
   #expertise {
-    padding: 100px 60px;
-    border-top: 1px solid rgba(255,255,255,0.04);
+    background: var(--navy);
+    padding: 96px 80px;
   }
 
-  .expertise-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: end;
-    margin-bottom: 64px;
-  }
-
-  .expertise-intro {
-    color: var(--slate-light);
-    font-size: 0.95rem;
-    line-height: 1.8;
-    font-weight: 300;
-    max-width: 420px;
-  }
+  #expertise .section-heading { color: var(--ivory); }
 
   .expertise-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: rgba(255,255,255,0.05);
+    gap: 2px;
+    background: rgba(201, 168, 76, 0.08);
   }
 
-  .exp-card {
-    background: var(--navy);
+  .expertise-card {
+    background: var(--navy-mid);
     padding: 40px 36px;
-    transition: background 0.3s;
     position: relative;
-    overflow: hidden;
+    transition: background 0.25s;
+    cursor: default;
   }
 
-  .exp-card::before {
+  .expertise-card:hover { background: var(--navy-light); }
+
+  .expertise-card::after {
     content: '';
     position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, var(--teal-dim) 0%, transparent 60%);
-    opacity: 0;
-    transition: opacity 0.3s;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.35s ease;
   }
 
-  .exp-card:hover { background: rgba(13,27,62,0.8); }
-  .exp-card:hover::before { opacity: 1; }
+  .expertise-card:hover::after { width: 100%; }
 
-  .exp-icon {
-    font-size: 2rem;
+  .expertise-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: rgba(201, 168, 76, 0.15);
+    line-height: 1;
     margin-bottom: 20px;
-    display: block;
   }
 
-  .exp-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.05rem;
-    font-weight: 800;
-    color: var(--white);
-    margin-bottom: 12px;
+  .expertise-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ivory);
+    margin-bottom: 14px;
+    line-height: 1.3;
   }
 
-  .exp-desc {
-    font-size: 0.85rem;
-    color: var(--slate);
-    line-height: 1.7;
+  .expertise-desc {
+    font-size: 0.9rem;
     font-weight: 300;
+    color: rgba(245, 240, 232, 0.6);
+    line-height: 1.7;
   }
 
-  /* ─── Testimonials ──────────────────────────── */
-  #testimonials {
-    padding: 100px 60px;
-    border-top: 1px solid rgba(255,255,255,0.04);
-    background: linear-gradient(180deg, transparent 0%, rgba(13,27,62,0.3) 100%);
+  /* ── SPEAKING ────────────────────────────── */
+  #speaking {
+    background: var(--ivory-warm);
   }
 
-  .testimonials-header {
-    display: flex;
-    justify-content: space-between;
+  .speaking-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: end;
     margin-bottom: 56px;
   }
 
-  .testimonials-scroll {
+  .speaking-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
 
-  .quote-card {
-    background: rgba(13,27,62,0.5);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 4px;
-    padding: 36px;
+  .speaking-card {
+    background: var(--white);
+    border: 1px solid rgba(13, 27, 42, 0.08);
+    padding: 32px 28px;
     position: relative;
-    transition: border-color 0.3s, transform 0.3s;
+    transition: box-shadow 0.25s, transform 0.25s;
   }
 
-  .quote-card:hover {
-    border-color: rgba(0,212,184,0.3);
+  .speaking-card:hover {
+    box-shadow: 0 12px 40px rgba(13, 27, 42, 0.1);
     transform: translateY(-4px);
   }
 
-  .quote-mark {
-    font-family: 'Syne', sans-serif;
-    font-size: 4rem;
-    color: var(--teal);
-    line-height: 0.6;
-    margin-bottom: 20px;
-    opacity: 0.5;
+  .speaking-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
-  .quote-text {
-    font-size: 0.9rem;
-    color: var(--slate-light);
-    line-height: 1.8;
-    font-weight: 300;
-    font-style: italic;
-    margin-bottom: 28px;
-  }
-
-  .quote-author {
-    display: flex; align-items: center; gap: 12px;
-  }
-
-  .author-avatar {
-    width: 36px; height: 36px;
+  .speaking-tag-dot {
+    width: 5px;
+    height: 5px;
+    background: var(--gold);
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--teal), var(--navy-mid));
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Syne', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 800;
-    color: var(--navy);
     flex-shrink: 0;
   }
 
-  .author-name {
-    font-size: 0.82rem;
+  .speaking-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
     font-weight: 600;
-    color: var(--cream);
+    color: var(--navy);
+    margin-bottom: 12px;
+    line-height: 1.35;
   }
 
-  .author-title {
-    font-size: 0.72rem;
-    color: var(--slate);
-    letter-spacing: 0.04em;
+  .speaking-meta {
+    font-size: 0.84rem;
+    color: var(--text-mid);
+    line-height: 1.6;
   }
 
-  /* ─── Recognition ───────────────────────────── */
-  #recognition {
-    padding: 80px 60px;
-    border-top: 1px solid rgba(255,255,255,0.04);
+  /* ── INDUSTRIES ──────────────────────────── */
+  #industries {
+    background: var(--navy);
+    padding: 80px 80px;
   }
 
-  .recognition-grid {
+  #industries .section-heading { color: var(--ivory); }
+
+  .industry-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 40px;
+  }
+
+  .industry-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(245, 240, 232, 0.8);
+    background: transparent;
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    padding: 10px 20px;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    cursor: default;
+  }
+
+  .industry-tag:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(201, 168, 76, 0.06);
+  }
+
+  /* ── TESTIMONIALS ────────────────────────── */
+  #testimonials {
+    background: var(--ivory);
+  }
+
+  .testimonial-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin-top: 56px;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
   }
 
-  .rec-card {
-    padding: 28px 24px;
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 4px;
-    transition: border-color 0.3s, background 0.3s;
-    text-align: center;
-  }
-
-  .rec-card:hover {
-    border-color: rgba(0,212,184,0.25);
-    background: rgba(0,212,184,0.04);
-  }
-
-  .rec-icon { font-size: 2rem; margin-bottom: 12px; }
-
-  .rec-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 800;
-    color: var(--white);
-    margin-bottom: 8px;
-    line-height: 1.3;
-  }
-
-  .rec-sub {
-    font-size: 0.75rem;
-    color: var(--slate);
-    letter-spacing: 0.06em;
-  }
-
-  /* ─── CTA Section ───────────────────────────── */
-  #contact {
-    padding: 120px 60px;
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.04);
+  .testimonial-card {
+    background: var(--white);
+    border: 1px solid rgba(13, 27, 42, 0.07);
+    padding: 40px 36px;
     position: relative;
-    overflow: hidden;
   }
 
-  .cta-orb {
+  .testimonial-card::before {
+    content: '\201C';
     position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse 60% 80% at 50% 100%, rgba(0,212,184,0.08) 0%, transparent 70%);
-    pointer-events: none;
+    top: 20px;
+    right: 28px;
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    line-height: 1;
+    color: rgba(201, 168, 76, 0.12);
   }
 
-  .cta-title {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(2.2rem, 5vw, 3.8rem);
-    font-weight: 800;
-    color: var(--white);
-    line-height: 1.1;
+  .testimonial-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--text-dark);
+    line-height: 1.75;
+    margin-bottom: 28px;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .author-avatar {
+    width: 42px;
+    height: 42px;
+    background: var(--navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .author-avatar span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--gold);
+  }
+
+  .author-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 2px;
+  }
+
+  .author-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: var(--text-mid);
+    text-transform: uppercase;
+  }
+
+  /* ── CTA ─────────────────────────────────── */
+  #contact {
+    background: var(--navy);
+    padding: 100px 80px;
+    text-align: center;
+  }
+
+  .cta-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .cta-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 4vw, 3.8rem);
+    font-weight: 600;
+    color: var(--ivory);
+    line-height: 1.15;
     margin-bottom: 20px;
-    letter-spacing: -0.02em;
-    position: relative;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-heading em {
+    font-style: italic;
+    color: var(--gold-light);
   }
 
   .cta-sub {
     font-size: 1rem;
-    color: var(--slate-light);
-    margin-bottom: 48px;
     font-weight: 300;
-    position: relative;
+    color: rgba(245, 240, 232, 0.65);
+    max-width: 460px;
+    margin: 0 auto 44px;
+    line-height: 1.75;
   }
 
   .cta-actions {
     display: flex;
-    justify-content: center;
     gap: 16px;
+    justify-content: center;
     flex-wrap: wrap;
-    position: relative;
+    margin-bottom: 60px;
   }
 
-  /* ─── Footer ────────────────────────────────── */
-  footer {
-    padding: 36px 60px;
-    border-top: 1px solid rgba(255,255,255,0.04);
+  .social-row {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .social-link {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(201, 168, 76, 0.6);
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .social-link:hover { color: var(--gold); }
+
+  .social-divider {
+    width: 1px;
+    height: 16px;
+    background: rgba(201, 168, 76, 0.2);
+  }
+
+  /* ── FOOTER ──────────────────────────────── */
+  footer {
+    background: #080F18;
+    padding: 28px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(201, 168, 76, 0.08);
+  }
+
+  .footer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245, 240, 232, 0.35);
   }
 
   .footer-copy {
     font-size: 0.75rem;
-    color: var(--slate);
-    letter-spacing: 0.06em;
+    color: rgba(245, 240, 232, 0.25);
   }
 
-  .footer-links {
-    display: flex; gap: 28px;
-    list-style: none;
-  }
-
-  .footer-links a {
-    font-size: 0.72rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--slate);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .footer-links a:hover { color: var(--teal); }
-
-  /* ─── Scroll animations ─────────────────────── */
-  .reveal {
+  /* ── ANIMATIONS ──────────────────────────── */
+  .fade-in {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transform: translateY(24px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
   }
 
-  .reveal.visible {
+  .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
   }
 
-  @keyframes fade-up {
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes fade-in {
-    to { opacity: 1; }
-  }
-
-  /* ─── Counter animation ─────────────────────── */
-  .counting { display: inline-block; }
-
-  /* ─── Responsive ────────────────────────────── */
+  /* ── RESPONSIVE ──────────────────────────── */
   @media (max-width: 900px) {
-    nav { padding: 20px 24px; }
+    nav { padding: 0 24px; }
     .nav-links { display: none; }
-    #hero { padding: 120px 24px 60px; }
-    .trajectory-wrap { display: none; }
-    #stats { padding: 0 24px; }
-    .stats-inner { grid-template-columns: repeat(2, 1fr); }
-    #about { padding: 80px 24px; grid-template-columns: 1fr; gap: 40px; }
-    #expertise { padding: 80px 24px; }
-    .expertise-header { grid-template-columns: 1fr; }
-    .expertise-grid { grid-template-columns: repeat(2, 1fr); }
-    #testimonials { padding: 80px 24px; }
-    .testimonials-header { flex-direction: column; gap: 20px; align-items: start; }
-    .testimonials-scroll { grid-template-columns: 1fr; }
-    #recognition { padding: 60px 24px; }
-    .recognition-grid { grid-template-columns: repeat(2, 1fr); }
-    #contact { padding: 80px 24px; }
-    footer { padding: 28px 24px; flex-direction: column; gap: 16px; text-align: center; }
+
+    section { padding: 72px 28px; }
+    #expertise { padding: 72px 28px; }
+    #industries { padding: 72px 28px; }
+    #contact { padding: 72px 28px; }
+    footer { padding: 24px 28px; flex-direction: column; gap: 10px; text-align: center; }
+
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-content { padding: 60px 28px 40px; }
+    .hero-visual { display: none; }
+    .hero-name { font-size: 3rem; }
+
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .expertise-grid { grid-template-columns: 1fr; }
+    .speaking-header { grid-template-columns: 1fr; gap: 24px; }
+    .speaking-cards { grid-template-columns: 1fr; }
+    .testimonial-grid { grid-template-columns: 1fr; }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    .rail-inner { animation: none; }
+    .fade-in { transition: none; opacity: 1; transform: none; }
   }
 </style>
 </head>
+
 <body>
 
-<!-- Custom Cursor -->
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
-
-<!-- Nav -->
+<!-- ── NAV ───────────────────────────────────── -->
 <nav>
-  <a href="#" class="nav-logo">TS<span>.</span></a>
+  <a href="#" class="nav-logo">Tarun Singhal</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#expertise">Expertise</a></li>
-    <li><a href="#testimonials">Testimonials</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#speaking">Speaking</a></li>
+    <li><a href="#testimonials">Endorsements</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Connect</a>
+  <a href="#contact" class="nav-cta">Work with Tarun</a>
 </nav>
 
-<!-- Hero -->
-<section id="hero">
-  <div class="hero-bg-grid"></div>
-  <div class="hero-orb orb-1"></div>
-  <div class="hero-orb orb-2"></div>
+<!-- ── HERO ──────────────────────────────────── -->
+<section class="hero" id="home">
+  <div class="hero-arc"></div>
 
   <div class="hero-content">
-    <div class="hero-eyebrow">
-      <div class="eyebrow-line"></div>
-      <span class="eyebrow-text">Group CEO · Growth Leader · Ecosystem Influencer</span>
-    </div>
-
-    <h1 class="hero-title">
-      Building what<br>
-      <span class="highlight">matters</span> at scale.
-    </h1>
-
-    <p class="hero-sub">
-      Three decades of transforming cost centres into profit engines — from zero to multi-million dollar revenues, 75% market share, and inclusive growth for rural India and global enterprises.
+    <div class="hero-eyebrow">CxO Growth Leader &amp; GenAI Strategist</div>
+    <h1 class="hero-name">Tarun<br><em>Singhal</em></h1>
+    <p class="hero-title">Three decades shaping revenue, reputation &amp; the future of work</p>
+    <p class="hero-statement">
+      I partner with C-suite leaders to unlock growth at the intersection of sales transformation, digital marketing, and GenAI-led operations — turning complexity into competitive advantage.
     </p>
-
     <div class="hero-actions">
-      <a href="#about" class="btn-primary">
-        Explore the journey
-        <svg class="arrow-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <a href="#contact" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 15l.92 1.92z"/></svg>
+        Start a Conversation
+      </a>
+      <a href="#about" class="btn-ghost">
+        Explore Profile
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-photo-wrap">
+      <!-- Replace src with actual photo URL -->
+      <div class="hero-photo-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/>
         </svg>
-      </a>
-      <a href="#contact" class="btn-ghost">
-        Let's connect →
-      </a>
-    </div>
-  </div>
+        <span>Photo</span>
+      </div>
 
-  <!-- Growth Trajectory SVG -->
-  <div class="trajectory-wrap">
-    <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg">
-      <!-- Glow path -->
-      <path class="traj-path-glow"
-        d="M 40 300 C 80 280, 100 260, 140 240
-           C 180 220, 190 200, 220 170
-           C 250 145, 260 130, 290 100
-           C 320 72, 340 55, 380 30
-           C 400 18, 420 12, 440 8"
-      />
-      <!-- Main path -->
-      <path class="traj-path"
-        d="M 40 300 C 80 280, 100 260, 140 240
-           C 180 220, 190 200, 220 170
-           C 250 145, 260 130, 290 100
-           C 320 72, 340 55, 380 30
-           C 400 18, 420 12, 440 8"
-      />
-
-      <!-- Dots at key milestones -->
-      <g class="traj-dot">
-        <circle cx="40" cy="300" r="5" fill="#00D4B8" opacity="0.5"/>
-        <text class="traj-label" x="52" y="304">HCL</text>
-      </g>
-      <g class="traj-dot">
-        <circle cx="140" cy="240" r="5" fill="#00D4B8" opacity="0.6"/>
-        <text class="traj-label" x="152" y="244">Oracle / CA</text>
-      </g>
-      <g class="traj-dot">
-        <circle cx="220" cy="170" r="5" fill="#00D4B8" opacity="0.7"/>
-        <text class="traj-label" x="232" y="174">Sopra Steria</text>
-      </g>
-      <g class="traj-dot">
-        <circle cx="295" cy="100" r="5" fill="#00D4B8" opacity="0.85"/>
-        <text class="traj-label" x="307" y="104">Director BD</text>
-      </g>
-      <g class="traj-dot">
-        <circle cx="440" cy="8" r="7" fill="#00D4B8"/>
-        <circle cx="440" cy="8" r="14" fill="#00D4B8" opacity="0.12"/>
-        <text class="traj-label" x="380" y="-8" fill="#00D4B8" font-size="11" font-family="Syne,sans-serif" font-weight="700">Group CEO</text>
-        <text class="traj-label" x="384" y="4" fill="#8892AA" font-size="9">RuralShores</text>
-      </g>
-
-      <!-- Axis lines -->
-      <line x1="30" y1="20" x2="30" y2="320" stroke="rgba(136,146,170,0.15)" stroke-width="1"/>
-      <line x1="20" y1="310" x2="460" y2="310" stroke="rgba(136,146,170,0.15)" stroke-width="1"/>
-
-      <!-- Y-axis label -->
-      <text transform="rotate(-90 14 180)" x="14" y="180" class="traj-label" text-anchor="middle">Impact</text>
-      <text x="240" y="338" class="traj-label" text-anchor="middle">Career Progression</text>
-    </svg>
-  </div>
-</section>
-
-<!-- Stats -->
-<section id="stats">
-  <div class="stats-inner">
-    <div class="stat-item reveal">
-      <div class="stat-number"><span class="counting" data-target="30">0</span><span>+</span></div>
-      <div class="stat-label">Years of<br>Global Experience</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-number"><span class="counting" data-target="75">0</span><span>%</span></div>
-      <div class="stat-label">Market Share<br>Achieved in India</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-number"><span class="counting" data-target="3500">0</span><span>+</span></div>
-      <div class="stat-label">Colleagues<br>Empowered</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-number"><span class="counting" data-target="14">0</span></div>
-      <div class="stat-label">Operating<br>Centres Nationwide</div>
+      <!-- Credential chips -->
+      <div class="credential-chip chip-tedx">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <span>TEDx Speaker</span>
+      </div>
+      <div class="credential-chip chip-chevening">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <span>Chevening Scholar</span>
+      </div>
+      <div class="credential-chip chip-amity">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        <span>Hon. Prof. — Amity</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- About -->
+<!-- ── CREDENTIAL RAIL ────────────────────────── -->
+<div class="rail" aria-label="Career history">
+  <div class="rail-inner">
+    <!-- Duplicated for seamless loop -->
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Mobile Systems International (Ericsson)</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">CA Technologies</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Oracle</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Perot Systems</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">HCL Technologies</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Sopra Steria</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">RuralShores — Group CEO</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Nasscom</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">CII</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Amity University — Hon. Professor</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Alliance Manchester Business School</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Airbus GCC</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Société Générale GCC</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">IFCCI</span></div>
+    <!-- Duplicate set -->
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Mobile Systems International (Ericsson)</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">CA Technologies</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Oracle</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Perot Systems</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">HCL Technologies</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Sopra Steria</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">RuralShores — Group CEO</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Nasscom</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">CII</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Amity University — Hon. Professor</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Alliance Manchester Business School</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Airbus GCC</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">Société Générale GCC</span></div>
+    <div class="rail-item"><div class="rail-dot"></div><span class="rail-text">IFCCI</span></div>
+  </div>
+</div>
+
+<!-- ── ABOUT ──────────────────────────────────── -->
 <section id="about">
-  <div class="about-sticky">
-    <div class="section-eyebrow">
-      <div class="eyebrow-line"></div>
-      <span class="section-tag">About</span>
+  <div class="about-grid">
+    <div class="about-left fade-in">
+      <div class="section-eyebrow">About</div>
+      <h2 class="section-heading">Thirty years of building what lasts</h2>
+      <p class="about-para">
+        I'm a high-performance operator with an <strong>entrepreneurially-minded approach</strong> to growth — the kind of leader who sees an untapped market before it becomes obvious, then builds the engine to capture it.
+      </p>
+      <p class="about-para">
+        Across <strong>Global Capability Centers, enterprise sales, and digital transformation</strong>, I've taken organisations from zero to multi-million-dollar market share — including growing GCC operations in India for UK, European, and US businesses at Airbus and Société Générale, representing tens of thousands of employees.
+      </p>
+      <p class="about-para">
+        My edge is trust. CXOs and senior influencers across telecom, government, energy, banking, and professional services know that when I enter a room, the conversation shifts from vendor to partner. That's not a claim — it's a career.
+      </p>
+      <p class="about-para">
+        Today, I operate at the frontier where <strong>GenAI meets human judgment</strong> — designing operating models that make geography irrelevant and talent universally accessible.
+      </p>
     </div>
-    <h2 class="section-title">Where purpose meets performance</h2>
-    <p class="about-desc">
-      Tarun Singhal is a high-energy, entrepreneurially minded growth leader and ecosystem influencer — currently serving as Group CEO of RuralShores Integrated Business, the world's largest rural digital operations company.
-    </p>
-    <blockquote class="about-highlight">
-      "I lead with trust, cut through complexity, and turn strategy into outcomes."
-    </blockquote>
-    <p class="about-desc">
-      Honoured as an Honorary Professor at Amity University, a Distinguished Alumni of Indian Navy School, and a Chevening Scholar from Alliance Manchester Business School. A CXO whisperer who builds ecosystems, not just pipelines.
-    </p>
-    <div class="about-tags">
-      <span class="about-tag">AI Transformation</span>
-      <span class="about-tag">Enterprise Growth</span>
-      <span class="about-tag">GenAI Strategy</span>
-      <span class="about-tag">ESG</span>
-      <span class="about-tag">Rural Innovation</span>
-      <span class="about-tag">Inclusive Growth</span>
-      <span class="about-tag">CXO Advisory</span>
-    </div>
-  </div>
 
-  <!-- Career Timeline -->
-  <div>
-    <div class="section-eyebrow" style="margin-bottom:20px">
-      <div class="eyebrow-line"></div>
-      <span class="section-tag">Career Journey</span>
-    </div>
-    <div class="career-items" style="padding-left: 60px; position:relative;">
-      <!-- Vertical line -->
-      <div style="position:absolute; left:0; top:0; bottom:0; width:1px; background:rgba(255,255,255,0.06);"></div>
-
-      <div class="career-item reveal">
-        <div class="career-year">2025–<br>Present</div>
-        <div>
-          <div class="career-role">Group CEO</div>
-          <div class="career-company">RuralShores Integrated Business</div>
-          <div class="career-desc">Leading the world's largest rural digital operations company through global expansion — AI-enabled services, ESG-supported delivery, and Scalable Workforce-as-a-Service across 14 centres and 3,500+ colleagues.</div>
+    <div class="about-right fade-in">
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-number">30<sup>+</sup></div>
+          <div class="stat-label">Years in Global Markets</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">75<sup>%</sup></div>
+          <div class="stat-label">Peak Market Share Built</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">7<sup>+</sup></div>
+          <div class="stat-label">Global Organisations Led</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10<sup>+</sup></div>
+          <div class="stat-label">Sectors Served</div>
         </div>
       </div>
 
-      <div class="career-item reveal">
-        <div class="career-year">Prior</div>
-        <div>
-          <div class="career-role">Director, Business Development</div>
-          <div class="career-company">Sopra Steria India</div>
-          <div class="career-desc">Led large global accounts, GCC engagements, digital transformation mandates, and oversaw marketing, branding & communications for India operations.</div>
+      <div class="credential-list">
+        <div class="credential-item">
+          <div class="credential-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          </div>
+          TEDx Speaker
         </div>
-      </div>
-
-      <div class="career-item reveal">
-        <div class="career-year">Earlier</div>
-        <div>
-          <div class="career-role">Senior Growth Leader</div>
-          <div class="career-company">CA Technologies · Oracle</div>
-          <div class="career-desc">Drove enterprise sales and client relationships across telecom, BFSI, government, and industrial verticals — building multi-million dollar revenue streams from the ground up.</div>
+        <div class="credential-item">
+          <div class="credential-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          Honorary Professor — Amity University
         </div>
-      </div>
-
-      <div class="career-item reveal">
-        <div class="career-year">Foundation</div>
-        <div>
-          <div class="career-role">Growth & Delivery Leader</div>
-          <div class="career-company">HCL Technologies</div>
-          <div class="career-desc">Built the foundational competencies in integrated sales, operations, and international client management that defined a three-decade track record of consistent growth.</div>
+        <div class="credential-item">
+          <div class="credential-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          Chevening Scholar — Alliance Manchester Business School
+        </div>
+        <div class="credential-item">
+          <div class="credential-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          Distinguished Alumni — Indian Navy School
+        </div>
+        <div class="credential-item">
+          <div class="credential-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          Member — Nasscom, CII, IFCCI, BBG
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Expertise -->
+<!-- ── EXPERTISE ───────────────────────────────── -->
 <section id="expertise">
-  <div class="expertise-header reveal">
-    <div>
-      <div class="section-eyebrow">
-        <div class="eyebrow-line"></div>
-        <span class="section-tag">Expertise</span>
-      </div>
-      <h2 class="section-title">Where I create<br>the most value</h2>
-    </div>
-    <p class="expertise-intro">
-      From co-creating outcomes with CXOs to pioneering "Marketing as a Service", Tarun's expertise sits at the intersection of technology, people, and growth strategy.
-    </p>
-  </div>
+  <div class="section-eyebrow" style="color: var(--gold);">Areas of Impact</div>
+  <h2 class="section-heading" style="color:var(--ivory); max-width: 560px; margin-bottom: 56px;">
+    Where I create the most value for your organisation
+  </h2>
 
-  <div class="expertise-grid reveal">
-    <div class="exp-card">
-      <span class="exp-icon">🤖</span>
-      <div class="exp-title">AI-Led Transformation</div>
-      <div class="exp-desc">Championing GenAI strategy across enterprises — translating AI potential into measurable business outcomes, cost optimisation, and competitive advantage.</div>
+  <div class="expertise-grid">
+    <div class="expertise-card fade-in">
+      <div class="expertise-number">01</div>
+      <h3 class="expertise-title">Revenue Growth &amp; GTM Strategy</h3>
+      <p class="expertise-desc">Designing go-to-market engines that move from zero to meaningful market share. From India entry to global expansion, I've built pipelines across 10+ sectors.</p>
     </div>
-    <div class="exp-card">
-      <span class="exp-icon">📈</span>
-      <div class="exp-title">Revenue Growth & Scaling</div>
-      <div class="exp-desc">Proven record of taking products and services from zero to multi-million dollar revenues, with up to 75% market share achieved in India's enterprise technology space.</div>
+    <div class="expertise-card fade-in">
+      <div class="expertise-number">02</div>
+      <h3 class="expertise-title">Sales Ops &amp; CX Transformation</h3>
+      <p class="expertise-desc">Transforming sales operations and customer experience functions through process redesign, automation, and GenAI-led human-in-the-loop systems.</p>
     </div>
-    <div class="exp-card">
-      <span class="exp-icon">🌐</span>
-      <div class="exp-title">Global Client Ecosystems</div>
-      <div class="exp-desc">Deep, trusted CXO networks across telecom, BFSI, government, industrials, energy, and IT services spanning global markets across multiple decades.</div>
+    <div class="expertise-card fade-in">
+      <div class="expertise-number">03</div>
+      <h3 class="expertise-title">GenAI &amp; Agentic AI Strategy</h3>
+      <p class="expertise-desc">Advising boards and C-suites on practical GenAI adoption — identifying where automation creates leverage and where human judgment remains irreplaceable.</p>
     </div>
-    <div class="exp-card">
-      <span class="exp-icon">🏗️</span>
-      <div class="exp-title">Enterprise Digital Operations</div>
-      <div class="exp-desc">Architect of Scalable Workforce-as-a-Service models enabling global enterprises to grow efficiently, reduce infrastructure barriers, and enhance quality.</div>
+    <div class="expertise-card fade-in">
+      <div class="expertise-number">04</div>
+      <h3 class="expertise-title">GCC &amp; Offshore Growth</h3>
+      <p class="expertise-desc">Deep expertise scaling Global Capability Centers in India for UK, EU, and US businesses — from Airbus to SocGen — tens of thousands of employees across complex environments.</p>
     </div>
-    <div class="exp-card">
-      <span class="exp-icon">🌱</span>
-      <div class="exp-title">Inclusive & ESG Growth</div>
-      <div class="exp-desc">Pioneer of rural digital operations creating sustainable livelihoods — where social impact and business performance are not a trade-off but a multiplier.</div>
+    <div class="expertise-card fade-in">
+      <div class="expertise-number">05</div>
+      <h3 class="expertise-title">Digital Marketing &amp; Brand Building</h3>
+      <p class="expertise-desc">Pioneered "Marketing as a Service" — turning cost centres into profit centres. Built brands from scratch to 75% market share in India's most competitive sectors.</p>
     </div>
-    <div class="exp-card">
-      <span class="exp-icon">🔗</span>
-      <div class="exp-title">Strategic Partnerships</div>
-      <div class="exp-desc">Master at forging lasting alliances through ecosystem influencing — turning strategic relationships into revenue, market access, and long-term growth platforms.</div>
+    <div class="expertise-card fade-in">
+      <div class="expertise-number">06</div>
+      <h3 class="expertise-title">Enterprise &amp; Government Relations</h3>
+      <p class="expertise-desc">Trusted relationship networks across telecom, government, industrials, banking, energy and professional services — built over three decades across global markets.</p>
     </div>
   </div>
 </section>
 
-<!-- Testimonials -->
-<section id="testimonials">
-  <div class="testimonials-header">
-    <div>
-      <div class="section-eyebrow">
-        <div class="eyebrow-line"></div>
-        <span class="section-tag">Social Proof</span>
-      </div>
-      <h2 class="section-title">What leaders say</h2>
+<!-- ── SPEAKING ────────────────────────────────── -->
+<section id="speaking">
+  <div class="speaking-header">
+    <div class="fade-in">
+      <div class="section-eyebrow">Speaking &amp; Media</div>
+      <h2 class="section-heading">On the stage &amp; in the conversation</h2>
+    </div>
+    <div class="fade-in">
+      <p class="section-sub" style="margin-bottom: 0;">
+        As a TEDx speaker and industry voice at Nasscom, CII, and IFCCI, I bring frameworks that make GenAI and growth strategy tangible for senior audiences.
+      </p>
     </div>
   </div>
 
-  <div class="testimonials-scroll">
-    <div class="quote-card reveal">
-      <div class="quote-mark">"</div>
-      <p class="quote-text">Tarun is a rare blend of strategic thinker, tech-savvy leader, and trusted advisor. His ability to lead with trust, cut through complexity, and turn strategy into outcomes consistently stands out.</p>
-      <div class="quote-author">
-        <div class="author-avatar">RS</div>
+  <div class="speaking-cards">
+    <div class="speaking-card fade-in">
+      <div class="speaking-tag"><div class="speaking-tag-dot"></div>TEDx</div>
+      <h3 class="speaking-title">The Future of Work Is Borderless</h3>
+      <p class="speaking-meta">On building operating models where geography no longer limits access to talent, productivity, or opportunity — and how India leads this shift.</p>
+    </div>
+    <div class="speaking-card fade-in">
+      <div class="speaking-tag"><div class="speaking-tag-dot"></div>Keynote — Nasscom</div>
+      <h3 class="speaking-title">GenAI in the Enterprise: Human-in-the-Loop is the Strategy</h3>
+      <p class="speaking-meta">Why the most successful AI transformations keep humans at the centre — and how to architect sales, CX, and operations around that principle.</p>
+    </div>
+    <div class="speaking-card fade-in">
+      <div class="speaking-tag"><div class="speaking-tag-dot"></div>Panel — BW Businessworld</div>
+      <h3 class="speaking-title">The Art &amp; Science of Selling in a Post-Covid World</h3>
+      <p class="speaking-meta">Striking the balance between relationship-led sales and data-driven pipeline management in a market where trust has never been more valuable.</p>
+    </div>
+    <div class="speaking-card fade-in">
+      <div class="speaking-tag"><div class="speaking-tag-dot"></div>Industry Forum — CII</div>
+      <h3 class="speaking-title">GCCs as Growth Engines, Not Cost Centres</h3>
+      <p class="speaking-meta">How UK, EU, and US enterprises can reimagine their India operations as innovation and revenue hubs — lessons from Airbus, SocGen, and beyond.</p>
+    </div>
+    <div class="speaking-card fade-in">
+      <div class="speaking-tag"><div class="speaking-tag-dot"></div>Thought Leadership</div>
+      <h3 class="speaking-title">Marketing as a Service: Flipping the P&amp;L</h3>
+      <p class="speaking-meta">The model I pioneered at Sopra Steria — transforming a marketing cost centre into a profit-generating service line. A blueprint any enterprise can apply.</p>
+    </div>
+    <div class="speaking-card fade-in">
+      <div class="speaking-tag"><div class="speaking-tag-dot"></div>Available for Engagements</div>
+      <h3 class="speaking-title">Invite Tarun to Your Event</h3>
+      <p class="speaking-meta">Conferences, board sessions, leadership summits, and media appearances. Topics span GenAI strategy, revenue growth, India expansion, and the future of work.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── INDUSTRIES ─────────────────────────────── -->
+<section id="industries">
+  <div class="fade-in">
+    <div class="section-eyebrow" style="color: var(--gold);">Sector Experience</div>
+    <h2 class="section-heading" style="color:var(--ivory);">Industries I've shaped deals in</h2>
+  </div>
+  <div class="industry-tags">
+    <span class="industry-tag">Telecommunications</span>
+    <span class="industry-tag">Government &amp; Public Sector</span>
+    <span class="industry-tag">Banking &amp; Financial Services</span>
+    <span class="industry-tag">Energy &amp; Infrastructure</span>
+    <span class="industry-tag">Professional Services</span>
+    <span class="industry-tag">IT &amp; Software Outsourcing</span>
+    <span class="industry-tag">Industrials &amp; Manufacturing</span>
+    <span class="industry-tag">Hospitality</span>
+    <span class="industry-tag">Retail &amp; Logistics</span>
+    <span class="industry-tag">Healthcare</span>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ───────────────────────────── -->
+<section id="testimonials">
+  <div class="section-eyebrow fade-in">Endorsements</div>
+  <h2 class="section-heading fade-in">What C-suite leaders say</h2>
+
+  <div class="testimonial-grid" style="margin-top: 48px;">
+    <div class="testimonial-card fade-in">
+      <p class="testimonial-text">"Tarun is a transformational leader with an exceptional ability to drive customer success outcomes. His talent lies in seamlessly connecting business strategy, AI innovation, and enterprise execution to achieve remarkable results."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar"><span>RS</span></div>
         <div>
-          <div class="author-name">Robin Singh</div>
-          <div class="author-title">Head of Industry Solutions, AWS Telecom</div>
+          <div class="author-name">Senior Executive, Infosys</div>
+          <div class="author-role">Former Colleague &amp; Client</div>
         </div>
       </div>
     </div>
-
-    <div class="quote-card reveal">
-      <div class="quote-mark">"</div>
-      <p class="quote-text">A transformational leader with an exceptional ability to drive customer success outcomes — seamlessly connecting business strategy, AI innovation, and enterprise execution to achieve remarkable results.</p>
-      <div class="quote-author">
-        <div class="author-avatar">GS</div>
-        <div>
-          <div class="author-name">Gurvinder Singh</div>
-          <div class="author-title">Senior Technology Leader</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="quote-card reveal">
-      <div class="quote-mark">"</div>
-      <p class="quote-text">Tarun goes beyond merely selling solutions — he co-creates outcomes, builds trust, and fosters sustainable growth. I highly recommend him for senior roles in AI-led business transformation.</p>
-      <div class="quote-author">
-        <div class="author-avatar">MV</div>
+    <div class="testimonial-card fade-in">
+      <p class="testimonial-text">"What sets Tarun apart is his understanding of GenAI's potential to revolutionise business processes. He is a trusted advisor to CXOs — his approach goes beyond selling solutions; he co-creates outcomes, builds trust, and fosters sustainable growth."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar"><span>MV</span></div>
         <div>
           <div class="author-name">Murali Vullaganti</div>
-          <div class="author-title">Co-Founder & Director, RuralShores</div>
+          <div class="author-role">Co-Founder &amp; Director, RuralShores</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-in">
+      <p class="testimonial-text">"His proven approach — anchored in building trust-based relationships with CXOs and influencers across diverse sectors — drives organisations to scale to new heights in technology and talent innovation."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar"><span>GL</span></div>
+        <div>
+          <div class="author-name">Global Leadership Team</div>
+          <div class="author-role">Enterprise Technology Company</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-in">
+      <p class="testimonial-text">"He achieved impressive revenue growth and enhanced margins in a short span of few quarters. These achievements are a testament to his expertise in strategic sales and business transformation at the highest level."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar"><span>BD</span></div>
+        <div>
+          <div class="author-name">Board Director</div>
+          <div class="author-role">UK-Based Financial Services Firm</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Recognition -->
-<section id="recognition">
-  <div class="reveal">
-    <div class="section-eyebrow">
-      <div class="eyebrow-line"></div>
-      <span class="section-tag">Recognition</span>
-    </div>
-    <h2 class="section-title">Honours & distinctions</h2>
-  </div>
-
-  <div class="recognition-grid">
-    <div class="rec-card reveal">
-      <div class="rec-icon">🎓</div>
-      <div class="rec-title">Honorary Professor</div>
-      <div class="rec-sub">Amity University</div>
-    </div>
-    <div class="rec-card reveal">
-      <div class="rec-icon">🏅</div>
-      <div class="rec-title">Chevening Scholar</div>
-      <div class="rec-sub">Alliance Manchester Business School</div>
-    </div>
-    <div class="rec-card reveal">
-      <div class="rec-icon">⚓</div>
-      <div class="rec-title">Distinguished Alumni</div>
-      <div class="rec-sub">Indian Navy School, New Delhi</div>
-    </div>
-    <div class="rec-card reveal">
-      <div class="rec-icon">🌿</div>
-      <div class="rec-title">Aspire For Her Award</div>
-      <div class="rec-sub">Leadership in Inclusive Growth</div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
+<!-- ── CTA ────────────────────────────────────── -->
 <section id="contact">
-  <div class="cta-orb"></div>
-  <h2 class="cta-title">Ready to build<br>what's next?</h2>
-  <p class="cta-sub">Let's explore how growth, technology, and purpose can converge for your organisation.</p>
+  <p class="cta-eyebrow">Let's Build Something</p>
+  <h2 class="cta-heading">
+    If the next chapter requires <em>real growth,</em><br>let's talk.
+  </h2>
+  <p class="cta-sub">
+    Advisory mandates, board roles, speaking engagements, or strategic partnerships — I'm selective about the work I take on, and serious about the outcomes I deliver.
+  </p>
   <div class="cta-actions">
-    <a href="https://www.linkedin.com/in/tarun-singhal-4625551/" target="_blank" class="btn-primary">
-      Connect on LinkedIn
-      <svg class="arrow-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+    <a href="mailto:tarun@tarunsinghal.com" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Reach Out Directly
     </a>
-    <a href="https://www.ruralshores.com" target="_blank" class="btn-ghost">
-      Visit RuralShores →
+    <a href="https://www.linkedin.com/in/tarun-singhal-4625551/" target="_blank" rel="noopener" class="btn-ghost">
+      Connect on LinkedIn
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+    </a>
+  </div>
+
+  <div class="social-row">
+    <a href="https://www.linkedin.com/in/tarun-singhal-4625551/" target="_blank" rel="noopener" class="social-link">
+      LinkedIn
+    </a>
+    <div class="social-divider"></div>
+    <a href="https://twitter.com/india_singhal" target="_blank" rel="noopener" class="social-link">
+      Twitter / X
+    </a>
+    <div class="social-divider"></div>
+    <a href="#speaking" class="social-link">
+      Speaking Enquiries
     </a>
   </div>
 </section>
 
-<!-- Footer -->
+<!-- ── FOOTER ─────────────────────────────────── -->
 <footer>
-  <span class="footer-copy">© 2025 Tarun Singhal. Group CEO, RuralShores Integrated Business.</span>
-  <ul class="footer-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#expertise">Expertise</a></li>
-    <li><a href="https://www.linkedin.com/in/tarun-singhal-4625551/" target="_blank">LinkedIn</a></li>
-  </ul>
+  <span class="footer-name">Tarun Singhal</span>
+  <span class="footer-copy">© 2025 · New Delhi, India · Global Markets</span>
 </footer>
 
 <script>
-  // ─── Cursor ───────────────────────────────────
-  const dot  = document.getElementById('cursor-dot');
-  const ring = document.getElementById('cursor-ring');
-  let mouseX = 0, mouseY = 0;
-  let ringX = 0, ringY = 0;
-
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top  = mouseY + 'px';
-  });
-
-  function animateRing() {
-    ringX += (mouseX - ringX) * 0.14;
-    ringY += (mouseY - ringY) * 0.14;
-    ring.style.left = ringX + 'px';
-    ring.style.top  = ringY + 'px';
-    requestAnimationFrame(animateRing);
-  }
-  animateRing();
-
-  document.querySelectorAll('a, button, .exp-card, .quote-card, .rec-card, .stat-item, .career-item').forEach(el => {
-    el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
-    el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
-  });
-
-  // ─── Scroll Reveal ────────────────────────────
+  // Intersection observer for fade-in animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, 80 * (Array.from(entry.target.parentElement?.children || []).indexOf(entry.target)));
+        // Stagger children in same parent
+        const siblings = entry.target.parentElement.querySelectorAll('.fade-in');
+        siblings.forEach((el, idx) => {
+          if (!el.classList.contains('visible')) {
+            setTimeout(() => el.classList.add('visible'), idx * 100);
+          }
+        });
+        entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-  // ─── Counter Animation ────────────────────────
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.target, 10);
-    const duration = 1800;
-    const start = performance.now();
-    function step(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.floor(eased * target).toLocaleString();
-      if (progress < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
+  // Smooth active nav highlight
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
 
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('.counting').forEach(animateCounter);
-        counterObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('.stats-inner').forEach(el => counterObserver.observe(el));
-
-  // ─── Nav shrink on scroll ─────────────────────
-  const nav = document.querySelector('nav');
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) {
-      nav.style.padding = '14px 60px';
-    } else {
-      nav.style.padding = '24px 60px';
-    }
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 100;
+      if (window.scrollY >= sectionTop) current = section.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+      link.style.color = link.getAttribute('href') === `#${current}`
+        ? 'var(--gold)'
+        : 'rgba(245, 240, 232, 0.7)';
+    });
   });
 </script>
+
 </body>
 </html>
